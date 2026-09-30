@@ -14801,3 +14801,311 @@ body.gv-rtl .gv-ph-panel {
 .gv-pm-tooltip-more[data-gv-theme='light']::after {
   background: linear-gradient(to bottom, transparent, oklch(0.995 0.002 250));
 }
+
+/* ============================================================================
+   Bulk Message Selection & Usability Actions
+   ============================================================================ */
+
+.gv-msg-select-checkbox {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(120, 130, 140, 0.4);
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 8px 4px 0;
+  flex-shrink: 0;
+  transition: all 0.12s ease;
+  user-select: none;
+  vertical-align: middle;
+}
+
+user-query:hover > .gv-msg-select-checkbox,
+.user-query-container:hover > .gv-msg-select-checkbox,
+model-response:hover > .gv-msg-select-checkbox,
+.model-response:hover > .gv-msg-select-checkbox {
+  display: inline-flex;
+}
+
+.gv-bulk-select-mode .gv-msg-select-checkbox {
+  display: inline-flex !important;
+}
+
+.gv-msg-select-checkbox:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.gv-msg-select-checkmark {
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(-45deg) translate(0, -1px);
+  transition: all 0.1s ease;
+}
+
+.gv-msg-checkbox-checked {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.gv-msg-checkbox-checked .gv-msg-select-checkmark {
+  border-left-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+html[data-gv-scheme='dark'] .gv-msg-select-checkbox {
+  background: rgba(30, 34, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+html[data-gv-scheme='dark'] .gv-msg-select-checkbox:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+}
+
+.gv-turn-selected {
+  outline: 2px solid rgba(59, 130, 246, 0.5) !important;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.gv-turn-collapsed {
+  max-height: 52px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  opacity: 0.65;
+  transition:
+    max-height 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.gv-turn-collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.95));
+  pointer-events: none;
+}
+
+html[data-gv-scheme='dark'] .gv-turn-collapsed::after {
+  background: linear-gradient(to bottom, transparent, rgba(19, 22, 28, 0.95));
+}
+
+.gv-bulk-actions-toolbar {
+  position: fixed;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 2147483600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: rgba(18, 22, 30, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  color: #f1f5f9;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+}
+
+.gv-bulk-actions-toolbar.gv-bulk-toolbar-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.gv-bulk-toolbar-left,
+.gv-bulk-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gv-bulk-count-badge {
+  font-weight: 600;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.gv-bulk-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gv-bulk-filter-chip {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.gv-bulk-filter-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.gv-bulk-toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.gv-bulk-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.gv-bulk-action-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.gv-bulk-action-btn:active {
+  transform: translateY(0);
+}
+
+.gv-bulk-action-copy {
+  background: rgba(59, 130, 246, 0.3);
+  color: #bfdbfe;
+}
+
+.gv-bulk-action-copy:hover {
+  background: rgba(59, 130, 246, 0.45);
+  color: #ffffff;
+}
+
+.gv-bulk-action-quote {
+  background: rgba(168, 85, 247, 0.3);
+  color: #e9d5ff;
+}
+
+.gv-bulk-action-quote:hover {
+  background: rgba(168, 85, 247, 0.45);
+  color: #ffffff;
+}
+
+.gv-bulk-action-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.gv-bulk-action-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-actions-toolbar {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #0f172a;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-count-badge {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-filter-chip {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #475569;
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-filter-chip:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-toolbar-divider {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-action-btn {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-action-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+html:not([data-gv-scheme='dark']) .gv-bulk-action-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+.gv-bulk-action-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  z-index: 2147483605;
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.gv-bulk-action-toast.gv-bulk-action-toast-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
