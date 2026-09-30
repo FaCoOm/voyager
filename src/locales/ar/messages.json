@@ -3117,5 +3117,61 @@
   "popupPinHintDismiss": {
     "message": "إغلاق",
     "description": "Popup: dismiss the pin reminder"
+  },
+  "bulk_messages_select_mode": {
+    "message": "تحديد الرسائل",
+    "description": "Tooltip or button label to enter message selection mode"
+  },
+  "bulk_messages_selected_count": {
+    "message": "تم تحديد {count}",
+    "description": "Counter in bulk message selection toolbar"
+  },
+  "bulk_messages_select_all": {
+    "message": "الكل",
+    "description": "Select all messages filter button"
+  },
+  "bulk_messages_select_user": {
+    "message": "المطالبات",
+    "description": "Select only user prompts filter button"
+  },
+  "bulk_messages_select_assistant": {
+    "message": "الردود",
+    "description": "Select only AI responses filter button"
+  },
+  "bulk_messages_action_copy": {
+    "message": "نسخ",
+    "description": "Bulk copy action button"
+  },
+  "bulk_messages_action_quote": {
+    "message": "اقتباس",
+    "description": "Bulk quote reply action button"
+  },
+  "bulk_messages_action_collapse": {
+    "message": "طي",
+    "description": "Bulk collapse turns action button"
+  },
+  "bulk_messages_action_expand": {
+    "message": "توسيع",
+    "description": "Bulk expand turns action button"
+  },
+  "bulk_messages_copied_toast": {
+    "message": "تم نسخ {count} رسائل إلى الحافظة",
+    "description": "Toast message after bulk copying"
+  },
+  "bulk_messages_quoted_toast": {
+    "message": "تم اقتباس {count} رسائل في حقل الإدخال",
+    "description": "Toast message after bulk quote reply"
+  },
+  "bulk_messages_collapsed_toast": {
+    "message": "تم طي {count} رسائل",
+    "description": "Toast message after collapsing messages"
+  },
+  "bulk_messages_expanded_toast": {
+    "message": "تم توسيع {count} رسائل",
+    "description": "Toast message after expanding messages"
+  },
+  "bulk_messages_exit": {
+    "message": "إلغاء",
+    "description": "Exit bulk selection mode button"
   }
 }

@@ -3117,5 +3117,61 @@
   "popupPinHintDismiss": {
     "message": "Cerrar",
     "description": "Popup: dismiss the pin reminder"
+  },
+  "bulk_messages_select_mode": {
+    "message": "Seleccionar mensajes",
+    "description": "Tooltip or button label to enter message selection mode"
+  },
+  "bulk_messages_selected_count": {
+    "message": "{count} seleccionados",
+    "description": "Counter in bulk message selection toolbar"
+  },
+  "bulk_messages_select_all": {
+    "message": "Todos",
+    "description": "Select all messages filter button"
+  },
+  "bulk_messages_select_user": {
+    "message": "Prompts",
+    "description": "Select only user prompts filter button"
+  },
+  "bulk_messages_select_assistant": {
+    "message": "Respuestas",
+    "description": "Select only AI responses filter button"
+  },
+  "bulk_messages_action_copy": {
+    "message": "Copiar",
+    "description": "Bulk copy action button"
+  },
+  "bulk_messages_action_quote": {
+    "message": "Citar",
+    "description": "Bulk quote reply action button"
+  },
+  "bulk_messages_action_collapse": {
+    "message": "Colapsar",
+    "description": "Bulk collapse turns action button"
+  },
+  "bulk_messages_action_expand": {
+    "message": "Expandir",
+    "description": "Bulk expand turns action button"
+  },
+  "bulk_messages_copied_toast": {
+    "message": "Se copiaron {count} mensajes al portapapeles",
+    "description": "Toast message after bulk copying"
+  },
+  "bulk_messages_quoted_toast": {
+    "message": "Se citaron {count} mensajes en el prompt",
+    "description": "Toast message after bulk quote reply"
+  },
+  "bulk_messages_collapsed_toast": {
+    "message": "Se colapsaron {count} mensajes",
+    "description": "Toast message after collapsing messages"
+  },
+  "bulk_messages_expanded_toast": {
+    "message": "Se expandieron {count} mensajes",
+    "description": "Toast message after expanding messages"
+  },
+  "bulk_messages_exit": {
+    "message": "Cancelar",
+    "description": "Exit bulk selection mode button"
   }
 }

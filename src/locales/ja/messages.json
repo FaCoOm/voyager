@@ -3117,5 +3117,61 @@
   "popupPinHintDismiss": {
     "message": "閉じる",
     "description": "Popup: dismiss the pin reminder"
+  },
+  "bulk_messages_select_mode": {
+    "message": "メッセージを選択",
+    "description": "Tooltip or button label to enter message selection mode"
+  },
+  "bulk_messages_selected_count": {
+    "message": "{count}件選択中",
+    "description": "Counter in bulk message selection toolbar"
+  },
+  "bulk_messages_select_all": {
+    "message": "すべて",
+    "description": "Select all messages filter button"
+  },
+  "bulk_messages_select_user": {
+    "message": "プロンプト",
+    "description": "Select only user prompts filter button"
+  },
+  "bulk_messages_select_assistant": {
+    "message": "回答",
+    "description": "Select only AI responses filter button"
+  },
+  "bulk_messages_action_copy": {
+    "message": "コピー",
+    "description": "Bulk copy action button"
+  },
+  "bulk_messages_action_quote": {
+    "message": "引用",
+    "description": "Bulk quote reply action button"
+  },
+  "bulk_messages_action_collapse": {
+    "message": "折りたたむ",
+    "description": "Bulk collapse turns action button"
+  },
+  "bulk_messages_action_expand": {
+    "message": "展開",
+    "description": "Bulk expand turns action button"
+  },
+  "bulk_messages_copied_toast": {
+    "message": "{count}件のメッセージをクリップボードにコピーしました",
+    "description": "Toast message after bulk copying"
+  },
+  "bulk_messages_quoted_toast": {
+    "message": "{count}件のメッセージをプロンプトに引用しました",
+    "description": "Toast message after bulk quote reply"
+  },
+  "bulk_messages_collapsed_toast": {
+    "message": "{count}件のメッセージを折りたたみました",
+    "description": "Toast message after collapsing messages"
+  },
+  "bulk_messages_expanded_toast": {
+    "message": "{count}件のメッセージを展開しました",
+    "description": "Toast message after expanding messages"
+  },
+  "bulk_messages_exit": {
+    "message": "キャンセル",
+    "description": "Exit bulk selection mode button"
   }
 }

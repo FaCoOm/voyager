@@ -3117,5 +3117,61 @@
   "popupPinHintDismiss": {
     "message": "關閉",
     "description": "Popup: dismiss the pin reminder"
+  },
+  "bulk_messages_select_mode": {
+    "message": "選取訊息",
+    "description": "Tooltip or button label to enter message selection mode"
+  },
+  "bulk_messages_selected_count": {
+    "message": "已選取 {count} 則",
+    "description": "Counter in bulk message selection toolbar"
+  },
+  "bulk_messages_select_all": {
+    "message": "全選",
+    "description": "Select all messages filter button"
+  },
+  "bulk_messages_select_user": {
+    "message": "提問",
+    "description": "Select only user prompts filter button"
+  },
+  "bulk_messages_select_assistant": {
+    "message": "回答",
+    "description": "Select only AI responses filter button"
+  },
+  "bulk_messages_action_copy": {
+    "message": "複製",
+    "description": "Bulk copy action button"
+  },
+  "bulk_messages_action_quote": {
+    "message": "引用",
+    "description": "Bulk quote reply action button"
+  },
+  "bulk_messages_action_collapse": {
+    "message": "摺疊",
+    "description": "Bulk collapse turns action button"
+  },
+  "bulk_messages_action_expand": {
+    "message": "展開",
+    "description": "Bulk expand turns action button"
+  },
+  "bulk_messages_copied_toast": {
+    "message": "已複製 {count} 則訊息到剪貼簿",
+    "description": "Toast message after bulk copying"
+  },
+  "bulk_messages_quoted_toast": {
+    "message": "已引用 {count} 則訊息到輸入框",
+    "description": "Toast message after bulk quote reply"
+  },
+  "bulk_messages_collapsed_toast": {
+    "message": "已摺疊 {count} 則訊息",
+    "description": "Toast message after collapsing messages"
+  },
+  "bulk_messages_expanded_toast": {
+    "message": "已展開 {count} 則訊息",
+    "description": "Toast message after expanding messages"
+  },
+  "bulk_messages_exit": {
+    "message": "取消",
+    "description": "Exit bulk selection mode button"
   }
 }

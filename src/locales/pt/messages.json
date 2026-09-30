@@ -3117,5 +3117,61 @@
   "popupPinHintDismiss": {
     "message": "Fechar",
     "description": "Popup: dismiss the pin reminder"
+  },
+  "bulk_messages_select_mode": {
+    "message": "Selecionar mensagens",
+    "description": "Tooltip or button label to enter message selection mode"
+  },
+  "bulk_messages_selected_count": {
+    "message": "{count} selecionado(s)",
+    "description": "Counter in bulk message selection toolbar"
+  },
+  "bulk_messages_select_all": {
+    "message": "Todos",
+    "description": "Select all messages filter button"
+  },
+  "bulk_messages_select_user": {
+    "message": "Prompts",
+    "description": "Select only user prompts filter button"
+  },
+  "bulk_messages_select_assistant": {
+    "message": "Respostas",
+    "description": "Select only AI responses filter button"
+  },
+  "bulk_messages_action_copy": {
+    "message": "Copiar",
+    "description": "Bulk copy action button"
+  },
+  "bulk_messages_action_quote": {
+    "message": "Citar",
+    "description": "Bulk quote reply action button"
+  },
+  "bulk_messages_action_collapse": {
+    "message": "Recolher",
+    "description": "Bulk collapse turns action button"
+  },
+  "bulk_messages_action_expand": {
+    "message": "Expandir",
+    "description": "Bulk expand turns action button"
+  },
+  "bulk_messages_copied_toast": {
+    "message": "{count} mensagens copiadas para a área de transferência",
+    "description": "Toast message after bulk copying"
+  },
+  "bulk_messages_quoted_toast": {
+    "message": "{count} mensagens citadas no prompt",
+    "description": "Toast message after bulk quote reply"
+  },
+  "bulk_messages_collapsed_toast": {
+    "message": "{count} mensagens recolhidas",
+    "description": "Toast message after collapsing messages"
+  },
+  "bulk_messages_expanded_toast": {
+    "message": "{count} mensagens expandidas",
+    "description": "Toast message after expanding messages"
+  },
+  "bulk_messages_exit": {
+    "message": "Cancelar",
+    "description": "Exit bulk selection mode button"
   }
 }
