@@ -74,15 +74,20 @@ scripts/chrome-profile/
 # Git worktrees (local dev only)
 .worktrees/
 
-# Local agent outputs
+# Local agent outputs and research files
 .entire/
 .agent/
+.agents/
 .hermes/
 skills-lock.json
 docs/plans/
 output/
 src/pages/content/printBridge/
+resources/
+@resources/
+.gemini/
 
 gemini-voyager-formal/
 
 .codegraph/
+
