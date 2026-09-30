@@ -388,7 +388,9 @@ describe('plugin.schema.json', () => {
   );
 
   it('describes every key validateManifest emits for the DeepSeek formula-copy plugin', async () => {
-    const plugin = bundled.find((entry) => entry.label.includes('deepseek/plugins/formula-copy'));
+    const plugin = bundled.find((entry) =>
+      entry.label.replace(/\\/g, '/').includes('deepseek/plugins/formula-copy'),
+    );
     if (!plugin) throw new Error('the DeepSeek formula-copy plugin is missing from the catalog');
 
     const result = validateManifest(await inlineStyles(plugin));
