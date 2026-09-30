@@ -14,6 +14,7 @@ import { resolvePluginPlatformId } from '@/features/plugins/sites/registry';
 import { SiteRegistry } from '@/features/plugins/sites/registry';
 import { initI18n } from '@/utils/i18n';
 
+import { startBulkMessageActions } from './bulkMessageActions/index';
 import { startCanvasExport } from './canvasExport/index';
 import { startChangelog } from './changelog/index';
 import { startChatFontSizeAdjuster } from './chatFontSize/index';
@@ -347,6 +348,10 @@ async function initializeFeatures(): Promise<void> {
             quoteReplyResult[StorageKeys.HIGHLIGHT_TIMELINE_MARKERS_ENABLED] !== false,
         }),
         CleanupPositions.CleanupQuoteReply,
+      );
+      cleanupManager.registerCleanupFunction(
+        startBulkMessageActions(),
+        CleanupPositions.CleanupBulkMessageActions,
       );
       await delay(LIGHT_FEATURE_INIT_DELAY);
 

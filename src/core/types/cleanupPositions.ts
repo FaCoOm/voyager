@@ -7,6 +7,7 @@ export enum CleanupPositions {
   DestroySlashPromptFeatureInstance,
   DestroySentPromptChips,
   CleanupQuoteReply,
+  CleanupBulkMessageActions,
   CleanupInputVimMode,
   CleanupSendBehavior,
   CleanupDraftSave,
